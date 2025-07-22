@@ -1,0 +1,1430 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Buang scroll horizontal */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #321A4A;
+  /* untuk light mode */
+  --primary-color-2: #fdfdfd66;
+  /* untuk light mode */
+  --primary-color-3: white;
+  /* untuk light mode */
+  --primary-color-4: rgba(141, 115, 165, 0.5);
+  --primary-color-5: black;
+  --img-filter: brightness(0);
+  /* Hitam default */
+}
+
+[data-bs-theme="dark"] {
+  --primary-color: #9A7DCC;
+  /* warna terang saat dark mode */
+  --primary-color-2: #212529a2;
+  /* warna terang saat dark mode */
+  --primary-color-3: #321A4A;
+  /* warna terang saat dark mode */
+  --primary-color-4: rgba(202, 158, 243, 0.5);
+  --primary-color-5: white;
+  --img-filter: brightness(0) invert(1);
+  /* Jadi putih */
+}
+
+.utama-spinner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #C4BBCD;
+  width: 100vw;
+  height: 100vh;
+  position: "fixed";
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: "hidden";
+}
+
+.spinner {
+  gap: 20px;
+
+}
+
+.text-spinner h1 {
+  margin: 0;
+  font-size: 3em !important;
+  color: #321A4A;
+}
+
+.text-spinner p {
+  margin: 0;
+  font-size: 1em !important;
+  font-weight: bold;
+}
+
+.loader {
+  width: 46px;
+  height: 30px;
+  position: relative;
+  animation: split 1s ease-in infinite alternate;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  transform: translateX(-10px);
+  background: #321A4A;
+  opacity: 0.75;
+  backdrop-filter: blur(20px);
+}
+
+.loader::after {
+  left: auto;
+  right: 0;
+  background: #CE2555;
+  transform: translateX(10px);
+}
+
+@keyframes split {
+
+  0%,
+  25% {
+    width: 42px
+  }
+
+  100% {
+    width: 126px
+  }
+}
+
+.utama-navbar {
+  padding: 1rem 2rem !important;
+  background-color: var(--primary-color-4);
+  /* Gunakan RGBA agar transparan */
+  backdrop-filter: blur(10px);
+  /* Efek blur */
+}
+
+.logo-home {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo-home img {
+  width: 2rem;
+}
+
+.nav-item-beranda {
+  font-family: "Open Sans", sans-serif !important;
+  color: var(--primary-color);
+  font-weight: bold !important;
+  display: flex;
+  justify-content: center !important;
+  margin: 0 auto;
+}
+
+.btn-dark-mode {
+  color: var(--primary-color);
+  margin: 0 !important;
+  font-weight: bold !important;
+  display: flex !important;
+  justify-content: end !important;
+}
+
+.nav-item-beranda:hover {
+  color: white !important;
+}
+
+/* Floating Icons */
+.floating-icons,
+.floating-icons-1,
+.floating-icons-2,
+.floating-icons-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 2rem;
+  animation: floatIcons 5s infinite alternate ease-in-out;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.floating-icons {
+  position: absolute;
+  right: 45vw;
+  bottom: 5rem;
+}
+
+.floating-icons-1 {
+  position: absolute;
+  right: 40vw;
+  bottom: 4rem;
+}
+
+.floating-icons-2 {
+  position: absolute;
+  right: 35vw;
+  bottom: 5rem;
+}
+
+.floating-icons-3 {
+  position: absolute;
+  right: 18vw;
+  top: 1rem;
+}
+
+@keyframes floatIcons {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+.btn-dark-mode:hover {
+  color: white !important;
+  border: none;
+}
+
+.foto-wrapper {
+  position: relative;
+  width: 100%;
+  /* atau sesuaikan ukuran foto */
+  height: 25rem;
+  /* agar lingkaran pas */
+
+  display: flex;
+  justify-content: center;
+  /* center horizontal */
+  align-items: flex-end;
+  /* nempel ke bawah */
+}
+
+.foto-wrapper img {
+  width: 65%;
+  height: auto;
+  border-radius: 35%;
+  /* lingkaran penuh */
+  position: relative;
+  z-index: 2;
+}
+
+.circle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* sama dengan foto-wrapper */
+  height: 100%;
+  background: radial-gradient(circle, var(--primary-color), var(--primary-color));
+  border-radius: 50%;
+  z-index: 1;
+  /* di belakang foto */
+  opacity: 0.6;
+}
+
+.home-beranda {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 8rem auto !important;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  /* stack vertikal */
+  margin-left: 2vw;
+}
+
+.nama,
+.tagline h1 {
+  font-weight: bold !important;
+  color: var(--primary-color);
+  font-size: 2em;
+  margin-bottom: 0;
+  /* Hapus margin bawaan */
+}
+
+.text-home {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.tagline {
+  display: flex;
+  font-weight: bold;
+  margin-left: 50px;
+  color: #CE2555 !important;
+  margin-top: 0;
+}
+
+.rotating-text-wrapper {
+  display: inline-block;
+  font-size: 1.5em;
+  width: 16rem;
+  text-align: left;
+  /* atau left / right */
+}
+
+.bio {
+  font-weight: 1000;
+  margin-left: 8vw;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+
+.button-project {
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  background-color: var(--primary-color);
+  color: var(--primary-color-3);
+  padding: 0.5rem 2rem;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em !important;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-media img {
+  cursor: pointer;
+  width: 3vw;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: efek neon */
+.social-media img:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: brightness(1.2);
+  filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 50px var(--primary-color)) drop-shadow(0 0 10px var(--primary-color));
+  /* Neon Cyan */
+}
+
+.button-project:hover {
+  background-color: #CE2555;
+  color: white;
+}
+
+.button-project:active {
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.about-me {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* Tambahan penting */
+}
+
+.text-about-me {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--primary-color);
+  margin: 0;
+  padding-left: 5rem !important;
+}
+
+.text-about-me h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 0;
+}
+
+.text-about-me h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.text-about-me p {
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.p2-aboutme {
+  font-weight: 800 !important;
+}
+
+.picture-about-me {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+  /* Tengah di mobile */
+  padding-left: 3rem !important;
+  padding-right: 5rem !important;
+}
+
+.picture-about-me img {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+}
+
+/* Efek melayang naik turun */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.picture-about-me img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gambar ke-2: animasi berbeda */
+.picture-about-me img:nth-child(2) {
+  animation: floatReverse 4s ease-in-out infinite;
+}
+
+@keyframes floatReverse {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.picture-1 {
+  margin-bottom: 2rem;
+}
+
+.garis-putus {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.garis {
+  width: 2vw;
+  height: 0.5rem;
+  background-color: var(--primary-color);
+}
+
+.experience-1 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.experience {
+  background-color: var(--primary-color-4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  margin: 5rem 3rem !important;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.utama-experince {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+.experience h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color-5);
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.item-experience-1 {
+  margin: 3rem 1.5rem !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5% !important;
+  gap: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.item-experience-1:hover {
+  transform: translateY(-5px);
+}
+
+.detail-experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-experience,
+.jobdesk-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  text-align: left;
+  margin: 0;
+}
+
+.posisi-experience {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+}
+
+.instansi-experience {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tgl-experience {
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.nilai-experience {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.jobdesk-experience {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.poin {
+  font-weight: bold;
+  font-size: 1.2em;
+  /* Lebih mendekati teks */
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1;
+}
+
+.jobdesk {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.jobdesk p {
+  margin: 0;
+}
+
+.project h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.utama-project {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 90vw;
+}
+
+.utama-project h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--primary-color-5);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.item-project {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto !important;
+}
+
+.project-1 {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  margin: 5rem 2rem;
+  padding: 0;
+  width: 90%;
+}
+
+.project-1:hover {
+  transform: translateY(-5px);
+}
+
+.project-1 img {
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  display: block;
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.title-project {
+  position: relative;
+}
+
+.title-project .collapse-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 125%;
+  background: white;
+  z-index: 10;
+  padding: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.title-project .collapse-content p {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 0.85em;
+  color: var(--primary-color-5);
+  text-align: right;
+}
+
+.collapse-content-link {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.collapse-content-link:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.title-project p {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.see-more {
+  line-height: 1;
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  margin: 2rem 1rem 1rem;
+  cursor: pointer;
+}
+
+.see-more p {
+  font-weight: 500;
+  font-size: 0.85em;
+  color: var(--primary-color-5);
+}
+
+.see-more svg {
+  width: 20px;
+}
+
+.see-more:hover p,
+.see-more:hover svg {
+  font-weight: bold;
+  /* buat text bold */
+  color: var(--primary-color);
+  /* ubah warna jadi ungu */
+  fill: var(--primary-color);
+  /* untuk SVG yang pakai fill */
+}
+
+.utama-project .nav-link {
+  font-weight: bold !important;
+  color: var(--primary-color-5) !important;
+}
+
+.utama-project .nav-link.active {
+  background-color: var(--primary-color-4) !important;
+  color: var(--primary-color-5) !important;
+  /* Teks putih */
+  background-color: var(--primary-color-4) !important;
+  font-weight: bold;
+}
+
+.project {
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.utama-skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem auto;
+  border-radius: 10px;
+  width: 90vw;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: var(--primary-color);
+}
+
+.utama-skill h1 {
+  font-size: 2rem;
+  margin: 3rem 2rem;
+  font-weight: bold;
+}
+
+.hard-skill p {
+  font-weight: bold;
+  margin: 0 5rem;
+}
+
+.img-hard-skill {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  /* ini penting */
+  justify-content: center;
+  margin: 3rem auto;
+  gap: 1.5rem;
+  /* kalau mau jarak antar item */
+}
+
+.item-hard-skill {
+  width: fit-content;
+  /* contoh: bisa pakai fixed atau persen */
+  padding: 0;
+  /* hilangkan padding lebarnya */
+  margin: 1rem 0;
+}
+
+.item-hard-skill img {
+  height: 3.5rem;
+  width: auto;
+  display: block;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover: efek neon */
+.item-hard-skill img:hover {
+  filter: brightness(1.2);
+  filter: drop-shadow(0 0 1px var(--primary-color)) drop-shadow(0 0 1px var(--primary-color)) drop-shadow(0 0 10px var(--primary-color));
+  /* Neon Cyan */
+}
+
+.img-soft-skill {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+}
+
+.item-soft-skill {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  /* jaga teks tetap start */
+  margin: 1.5rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover: efek neon */
+.item-soft-skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px var(--primary-color);
+}
+
+.item-soft-skill img {
+  height: 3.5rem;
+  width: auto !important;
+  display: inline-block;
+  /* atau inline */
+  max-width: 100%;
+  filter: var(--img-filter);
+}
+
+.item-soft-skill p {
+  font-size: 0.85em;
+  font-weight: 500;
+  width: 25vw;
+  margin: 0;
+}
+
+.img-sertifikat {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: auto;
+  height: 28rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-sertifikat {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+  flex-direction: column;
+  background-color: var(--primary-color-4);
+  width: 90vw;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)
+}
+
+.carousel-sertifikat h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.img-carousel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6rem;
+  width: 85% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+}
+
+.img-carousel .carousel-indicators {
+  position: absolute;
+  /* Tetap absolute */
+  bottom: -60px;
+  /* Dorong ke luar area gambar */
+  justify-content: center;
+}
+
+.img-carousel .carousel-inner {
+  overflow: hidden;
+  /* Biar tidak overflow aneh */
+  border-radius: 10px;
+  /* Ikuti style kamu */
+  position: relative;
+  /* Wajib, supaya absolute indikator tetap di area Carousel */
+}
+
+.utama-contact {
+  width: 90vw;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+  border-radius: 10px;
+}
+
+.utama-contact h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
+  margin-left: 2rem;
+  color: var(--primary-color);
+}
+
+.email-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  cursor: pointer;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.email-contact img {
+  margin-bottom: 0.5rem;
+  width: 10vw;
+}
+
+.email-contact p {
+  font-weight: bold;
+  color: var(--primary-color-5);
+}
+
+.contact-sosmed {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-sosmed img {
+  width: 3.5vw;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: efek neon */
+.contact-sosmed img:hover,
+.email-contact:hover {
+  filter: brightness(0);
+  filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 1px var(--primary-color)) drop-shadow(0 0 10px var(--primary-color));
+  /* Neon Cyan */
+}
+
+
+.footer {
+  background-color: var(--primary-color-4);
+  margin: 0 !important;
+  width: 100%;
+  padding: 0;
+}
+
+.footer p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding: 1rem;
+  margin: 0;
+}
+
+
+/* === Tablet === */
+@media (max-width: 1023px) {
+
+  .logo-home img {
+    width: 25px;
+  }
+
+  .btn-dark-mode {
+    font-size: 0.85em !important;
+  }
+
+  .foto-wrapper {
+    width: 30vw;
+    /* atau sesuaikan ukuran foto */
+    height: 25rem;
+    /* agar lingkaran pas */
+  }
+
+  .foto-wrapper img {
+    width: 30vw;
+  }
+
+  .home-beranda h1 {
+    font-size: 1.8em;
+  }
+
+  .rotating-text-wrapper {
+    font-size: 1.2em;
+    width: 18rem;
+  }
+
+
+  .information {
+    margin-left: 13rem;
+  }
+
+  .button-project {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85em !important;
+  }
+
+  .social-media {
+    gap: 0.5rem;
+  }
+
+  .social-media img {
+    width: 4vw;
+  }
+
+  .text-about-me {
+    padding-left: 2rem;
+    width: 60vw !important;
+  }
+
+  .text-about-me h1 {
+    font-size: 1.5em;
+  }
+
+  .text-about-me h3 {
+    font-size: 1em;
+  }
+
+  .text-about-me p {
+    font-size: 0.85em;
+  }
+
+  .picture-about-me {
+    padding-left: 1.5rem !important;
+    padding-right: 3.5rem !important;
+    width: 40vw !important;
+  }
+
+  .experience {
+    margin-top: 0 !important;
+    width: 85vw !important;
+  }
+
+  .experience h1 {
+    font-size: 1.8em;
+  }
+
+  .item-experience-1 {
+    width: 20vw !important;
+    margin: 2rem 1rem !important;
+  }
+
+  .posisi-experience {
+    font-size: 1.25em;
+  }
+
+  .instansi-experience {
+    font-size: 0.8em;
+  }
+
+  .tgl-experience {
+    font-size: 0.8em;
+  }
+
+  .nilai-experience {
+    font-size: 0.8em;
+  }
+
+  .jobdesk {
+    font-size: 0.8em;
+  }
+
+  .project-1 {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    margin: 5rem 1.5rem;
+    padding: 0;
+    width: 90%;
+  }
+
+  .img-soft-skill {
+    width: 90%;
+  }
+
+  .item-soft-skill {
+    margin: 1.5rem 1.5rem;
+  }
+
+  .img-sertifikat {
+    height: 19rem;
+  }
+
+  .img-carousel {
+    width: 100% !important;
+  }
+
+.email-contact img {
+  width: 15vw;
+}
+
+.contact-sosmed img {
+  width: 5vw;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer{
+  width: 100vw;
+}
+}
+
+/* === Mobile === */
+@media (max-width: 767px) {
+  .text-spinner h1 {
+    margin: 0;
+    font-size: 1.8em !important;
+    color: #321A4A;
+  }
+
+  .text-spinner p {
+    margin: 0;
+    font-size: 0.85em !important;
+    font-weight: bold;
+  }
+
+  .loader {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    animation: split 1s ease-in infinite alternate;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+  }
+
+  .loader::before,
+  .loader::after {
+    height: 20px;
+    width: 20px;
+    transform: translateX(10px);
+  }
+
+  .nav-item-beranda {
+    margin-top: 1rem !important;
+  }
+
+  .nav-item-beranda,
+  .btn-dark-mode {
+    font-size: 0.75em !important;
+  }
+
+  .floating-icons {
+    position: absolute;
+    right: 5vw;
+    bottom: 19rem;
+  }
+
+  .floating-icons-1 {
+    position: absolute;
+    right: 80vw;
+    bottom: 4rem;
+  }
+
+  .floating-icons-2 {
+    position: absolute;
+    right: 10vw;
+    bottom: 3rem;
+  }
+
+  .floating-icons-3 {
+    position: absolute;
+    left: 1vw;
+    top: 1rem;
+  }
+
+  .foto-wrapper {
+    height: auto;
+    /* Biarkan tinggi menyesuaikan gambar */
+    align-items: center;
+    /* Tengah vertikal */
+    margin-bottom: 2rem;
+    /* Jarak dengan text di bawahnya */
+  }
+
+  .foto-wrapper img {
+    width: 55%;
+    /* Lebih besar sedikit di mobile */
+    max-width: 300px;
+    /* Batasi agar tidak melebihi layar kecil */
+    border-radius: 50%;
+    /* Biar benar-benar bulat kalau mau */
+  }
+
+  .circle-bg {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    /* Pastikan lingkaran tetap bulat */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  .nama,
+  .tagline h1 {
+    font-size: 1.5em !important;
+  }
+
+  .nama {
+    margin-top: 2rem;
+  }
+
+  .hero-text {
+    margin-left: 0;
+    /* Hilangkan jarak samping */
+    text-align: center;
+    align-items: center;
+    /* Tengah */
+  }
+
+  .tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rotating-text-wrapper {
+    font-size: 1.3em !important;
+    display: inline-block;
+    width: 10rem;
+    text-align: left;
+    margin: 0;
+  }
+
+  .bio {
+    margin-left: 0;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    font-size: 0.85em;
+  }
+
+  .text-home {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-beranda {
+    flex-direction: column;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .information {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 3rem auto;
+  }
+
+  .button-project {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.85em !important;
+  }
+
+  .social-media {
+    gap: 0.5rem;
+  }
+
+  .social-media img {
+    width: 8vw;
+  }
+
+  .about-me {
+    margin-top: 0 !important;
+    width: 100vw;
+  }
+
+  .garis-putus {
+    padding-left: 3rem !important;
+    padding-right: 0rem !important;
+    margin: 2rem auto;
+  }
+
+  .text-about-me {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .text-about-me h1 {
+    font-size: 1.5em;
+  }
+
+  .text-about-me h3 {
+    font-size: 1em;
+  }
+
+  .text-about-me p {
+    margin-top: 1.5rem;
+    /* Lebih pendek di mobile */
+  }
+
+  .picture-about-me {
+    display: none;
+  }
+
+  .experience {
+    margin: 3rem 0 !important;
+  }
+
+  .utama-experience {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .experience h1 {
+    font-size: 1.5em;
+  }
+
+  .item-experience-1 {
+    width: 65vw !important;
+    margin: 1rem 1rem !important;
+  }
+
+  .posisi-experience {
+    font-size: 1em;
+  }
+
+  .instansi-experience {
+    font-size: 0.75em;
+  }
+
+  .tgl-experience {
+    font-size: 0.75em;
+  }
+
+  .nilai-experience {
+    font-size: 0.75em;
+  }
+
+  .jobdesk {
+    font-size: 0.75em;
+  }
+
+  .utama-project h1 {
+    font-size: 1.5em;
+  }
+
+  .project-1 {
+    width: 90% !important;
+  }
+
+  .utama-skill h1 {
+    font-size: 1.5rem;
+  }
+
+  .hard-skill p {
+    margin: 0 2rem;
+  }
+
+  .img-hard-skill {
+    width: 90%;
+  }
+
+  .item-hard-skill {
+    margin: 0.5rem 0;
+  }
+
+  .item-hard-skill img {
+    height: 2.5rem;
+  }
+
+  .img-soft-skill {
+    width: 95%;
+  }
+
+  .item-soft-skill {
+    margin: 1rem 2rem;
+    padding: 1.5rem;
+  }
+
+  .item-soft-skill img {
+    height: 2.5rem;
+  }
+
+  .item-soft-skill p {
+    font-size: 0.75em;
+    font-weight: 500;
+    width: 90%;
+    margin: 0;
+  }
+
+  .img-sertifikat {
+    height: 11rem;
+  }
+
+  .carousel-sertifikat h1 {
+    font-size: 1.5em;
+  }
+
+  .img-carousel {
+    margin-bottom: 4rem;
+    width: 95% !important;
+  }
+
+  .img-carousel .carousel-control-prev,
+  .img-carousel .carousel-control-next {
+    display: none !important;
+  }
+
+  .img-carousel .carousel-indicators {
+    bottom: -45px;
+  }
+
+.utama-contact h1 {
+  font-size: 1.5em;
+}
+
+.email-contact img {
+  width: 25vw;
+}
+
+.contact-sosmed img {
+  width: 10vw;
+}
+
+.footer p {
+  font-size: 0.75em;
+}
+
+}
