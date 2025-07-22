@@ -2,8 +2,8 @@ const projectdata = [
   {
     img: "/portofolio.jpeg",
     title: "Personal Portfolio Site",
-    github: "/Portfolio",
-    demo: "/Portfolio"
+    github: "https://github.com/Zuhriya29/Portofolio-Tasbi",
+    demo: "https://portofolio-tasbi.vercel.app/"
   },
   {
     img: "/portal-berita.png",
