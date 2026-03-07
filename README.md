@@ -1,12 +1,52 @@
-# React + Vite
+# Tasbi Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website that showcases my profile, work experience, projects, technical skills, and certifications.
 
-Currently, two official plugins are available:
+The website was created to present my background and development work in a clean, modern, and responsive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Description
 
-## Expanding the ESLint configuration
+This portfolio website serves as a central place to display information about me as a web developer. Visitors can learn about my professional background, explore the projects I have built, and view the skills and certifications I have obtained.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website is designed with a simple and responsive layout so it can be accessed easily on different devices.
+
+## 🚀 Features
+
+* Personal profile section
+* Work experience history
+* Projects showcase
+* Skills and technologies section
+* Certifications section
+* Responsive design for desktop and mobile
+* Clean and modern user interface
+
+## 🛠️ Tech Stack
+
+<p>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="80"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="80"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="80"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="80"/>
+</p>
+
+## 🖼️ Website Preview
+
+![Preview](screenshot/preview-website.jpeg)
+
+## 💻 Live Demo
+
+https://portofolio-tasbi.vercel.app/
+
+## 📱 Responsive Design
+
+This website is designed to work well on:
+
+* Desktop
+* Tablet
+* Mobile
+
+## 👨‍💻 Developer
+
+Tasbi Khatuz Zuhriya
+
+This project was developed as my personal portfolio website to showcase my work and experience as a web developer.
