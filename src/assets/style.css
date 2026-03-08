@@ -159,8 +159,8 @@ body {
   justify-content: end !important;
 }
 
-.nav-item-beranda:hover {
-  color: white !important;
+.nav-item-beranda .link:hover, .active-nav {
+  color: var(--primary-color-5) !important;
 }
 
 /* Floating Icons */

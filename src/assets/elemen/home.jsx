@@ -13,7 +13,7 @@ function Home() {
               </div>
       
       
-              <Row id="home">
+              <Row id="Home">
                 <Col xs={12} sm={12} md={6} lg={6} className="foto-wrapper">
                   <div className="circle-bg animate__animated animate__zoomIn"></div>
                   <img src="/foto-ku.png" alt="Foto" className="animate__animated animate__zoomIn" />

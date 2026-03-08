@@ -1,5 +1,13 @@
 const experiencedata = [
   {
+    posisi: "Frontend Developer",
+    instansi: "UPT Publikasi Ilmiah - Universitas Negeri Malang",
+    tanggal: "Aug 2025 - Sep 2025",
+    jobdesk1: "Designed the profile website for UPT Publikasi Ilmiah Universitas Negeri Malang using the React.js framework.",
+    jobdesk2: "Developed user interface components and implemented key website features to support the platform’s functionality.",
+    jobdesk3: "Improved the accessibility and presentation of scientific publication information for users through a responsive and structured web interface."
+  },
+  {
     posisi: "Fullstack Developer",
     instansi: "PT. Winnicode Garuda Teknologi",
     tanggal: "Feb 2025 - Jul 2025",
