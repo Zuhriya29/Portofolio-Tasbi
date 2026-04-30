@@ -1,15 +1,15 @@
 const projectdata = [
   {
+    img: "/finpersona.jpeg",
+    title: "FinPersona - AI powered Financial Persona Assessment Web App",
+    github: "https://github.com/Zuhriya29/FinPersona",
+    demo: "https://fin-persona.vercel.app/"
+  },
+  {
     img: "/publika-um.jpeg",
     title: "Profil UPT Publikasi Ilmiah UM",
     github: "https://github.com/Zuhriya29/Website-Publika",
     demo: "https://website-publika.vercel.app/"
-  },
-  {
-    img: "/portofolio.jpeg",
-    title: "Personal Portfolio Site",
-    github: "https://github.com/Zuhriya29/Portofolio-Tasbi",
-    demo: "https://portofolio-tasbi.vercel.app/"
   },
   {
     img: "/portal-berita.png",

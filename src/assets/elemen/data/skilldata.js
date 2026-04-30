@@ -1,18 +1,18 @@
 const skilldata = [
     {
+        img: "/skill/next-js.png"
+    },
+    {
         img: "/skill/react.png"
     },
     {
-        img: "/skill/laravel.png"
+        img: "/skill/javascript.png"
     },
     {
-        img: "/skill/react-bootstrap.png"
+        img: "/tailwind-css.png"
     },
     {
-        img: "/skill/django.png"
-    },
-    {
-        img: "/skill/my-sql.png"
+        img: "/skill/bootstrap.png"
     },
     {
         img: "/skill/html.png"
@@ -21,16 +21,16 @@ const skilldata = [
         img: "/skill/css.png"
     },
     {
-        img: "/skill/javascript.png"
+        img: "/skill/laravel.png"
     },
     {
         img: "/skill/php.png"
     },
     {
-        img: "/skill/bootstrap.png"
+        img: "/skill/my-sql.png"
     },
     {
-        img: "/tailwind-css.png"
+        img: "/icon-github.png"
     },
     {
         img: "/skill/postman.png"

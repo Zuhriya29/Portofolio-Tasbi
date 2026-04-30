@@ -1,5 +1,11 @@
 const project2data = [
   {
+    img: "/halo-kalahari.png",
+    title: "Halo Kalahari - Campus Information Helpdesk",
+    prototype: "https://www.figma.com/proto/mKTjUn82MR9kn2eDiWwDFB/Halo-Kalahari?node-id=0-1&t=2UZsWFCaueVxOWLs-1",
+    design: "https://www.figma.com/design/mKTjUn82MR9kn2eDiWwDFB/Halo-Kalahari?node-id=0-1&t=2UZsWFCaueVxOWLs-1"
+  },
+  {
     img: "/design-snapbox.png",
     title: "Snapbox Studio – Photobox Booking Website",
     prototype: "https://www.figma.com/proto/75ZZ8hjY6lVWn4qkX831Y4/Snapbox?node-id=0-1&t=POjdryG6vkcAa0w6-1",
