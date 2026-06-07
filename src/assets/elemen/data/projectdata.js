@@ -1,6 +1,6 @@
 const projectdata = [
   {
-    img: "/pemesanan-makanan.jpeg",
+    img: "/pemesanan-makanan.png",
     title: "Full Stack Development - Food Ordering Website",
     github: "https://github.com/Zuhriya29/Website-Pemesanan-Makanan",
     demo: "https://griya-dhahar-suroboyo.vercel.app/"
