@@ -1,5 +1,11 @@
 const projectdata = [
   {
+    img: "/pemesanan-makanan.jpeg",
+    title: "Full Stack Development - Food Ordering Website",
+    github: "https://github.com/Zuhriya29/Website-Pemesanan-Makanan",
+    demo: "https://griya-dhahar-suroboyo.vercel.app/"
+  },
+  {
     img: "/finpersona.jpeg",
     title: "FinPersona - AI powered Financial Persona Assessment Web App",
     github: "https://github.com/Zuhriya29/FinPersona",
